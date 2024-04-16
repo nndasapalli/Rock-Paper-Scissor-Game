@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="title"> 
+        <h1>ROCK PAPER SCISSORS</h1>
+    </div>
+
+    <div id="options">
+        <div class="choice" id="rock"> 
+            <img src="images/rock.png" alt="rock"> 
+            <h2>Rock</h2> </div>
+        <div class="choice" id="paper"> 
+            <img src="images/paper.png" alt="paper"> 
+            <h2>Paper</h2> </div>
+        <div class="choice" id="scissor"> 
+            <img src="images/scissors.png" alt="scissor"> 
+            <h2>Scissor</h2> </div>
+    </div>
+
+    <div id="scoreBoard">
+        <div>
+            <h2 id="heading">Score Board</h2>
+        </div>
+        <div id="score">
+            <div id="user-score">
+                <p id="user-score-display">0</p>
+                <p>You</p>
+            </div>
+            <div id="computer-score">
+                <p id="computer-score-display">0</p>
+                <p>Computer</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="conclusion">
+        <p id="result">Your turn to start</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
