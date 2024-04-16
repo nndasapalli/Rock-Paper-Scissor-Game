@@ -4,11 +4,12 @@ let userScoreDisplay = document.querySelector("#user-score-display");
 let computerScoreDisplay = document.querySelector("#computer-score-display");
 let userScore = 0;
 let computerScore = 0;
-let showWinner = (userWin)=>{
+
+let showWinner = (userWin, userChoice, computerChoice)=>{
     if(userWin){
 
         //console.log("You WIN!")
-        result.innerText = "You WIN!";
+        result.innerText = `You WIN!, Your ${userChoice} beats ${computerChoice}`;
         result.style.backgroundColor = "#41B06E";
         result.style.color = "#392467";
         userScoreDisplay.innerText = ++userScore;
@@ -17,7 +18,7 @@ let showWinner = (userWin)=>{
     }else{
 
         //console.log("You LOOSE!!!!!")
-        result.innerText = "You LOST!";
+        result.innerText = `You LOST!, ${computerChoice} beats your ${userChoice}`;
         result.style.backgroundColor = "#FF204E";
         result.style.color = "#FFD1E3";
         computerScoreDisplay.innerText = ++computerScore;
@@ -50,7 +51,7 @@ let playGame = (userChoice, computerChoice)=>{
             // computerChoice might be either - rock/paper.
             userWin = computerChoice === "rock" ? false : true;
         }
-        showWinner(userWin);
+        showWinner(userWin, userChoice, computerChoice);
     }
 }
 
